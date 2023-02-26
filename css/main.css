@@ -1,0 +1,203 @@
+:root {
+    --max-width: 1280px;
+    --min-width: 320px;
+    --accent-color: #3aa9b1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Container */
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-width: var(--min-width);
+    background-image: url("/img/background_01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.header,
+.content,
+.footer {
+    width: 100%;
+    margin: 0 auto;
+    padding: 1 rem;
+    max-width: var(--max-width);
+    min-width: var(--min-width);
+}
+
+.book-appointment {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+.logo img {
+    margin: 0.5rem;
+    margin-left: 20%;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.menu-list_item {
+    display: inline-block;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.menu-list_item:last-child {
+    margin-right: 0;
+}
+
+
+
+/*conter*/
+
+.content{
+    display:flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position:relative;
+    margin-left: 5rem;
+   
+
+}
+
+.slideButton {
+    position:absolute;
+    top:40%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+.prevSlide{
+    left: -3.5rem;
+
+}
+.nextSlide{
+    right: 8rem;
+}
+
+.content_claim {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin: 0 0;
+
+}
+
+.content_subclaim {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    margin-bottom: 1.5rem;
+
+}
+
+/*footer*/
+
+.footer-wrapper {
+    background-color: black;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_widget {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+.footer_widget_claim {
+    color: var(--accent-color);
+    margin:0 0 1rem 0;   
+}
+.footer_widget_title{
+    color: var(--accent-color);
+}
+.footer_widget_text {
+    margin:0;
+}
+
+
+/* responsive */
+
+@media screen and (max-width:750px) {
+    .header, .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .book-appointment{
+        font-size: 0.8rem;
+    }
+    .menu{
+        margin-top: 0.5rem;
+    }
+    .content{
+        align-items: center;
+        margin-left: 0;
+    }
+    
+    .footer_widget {
+        margin-bottom: 1rem;
+    }
+    .slideButton {
+        position:absolute;
+        top:90%;
+        transform: translateY(-50%);
+        font-size: 3rem;
+        cursor: pointer;
+    
+    }
+    .prevSlide{
+        left: 8rem;
+    
+    }
+    .nextSlide{
+        right: 8rem;
+    }
+    
+}
